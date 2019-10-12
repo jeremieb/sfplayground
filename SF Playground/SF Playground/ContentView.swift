@@ -8,28 +8,55 @@
 
 import SwiftUI
 
+//SF Symbol to try:
+// • hifispeaker.fill
+// • hifispeaker
 
-let smallConfiguration = UIImage.SymbolConfiguration(scale: .small)
-let mediumConfiguration = UIImage.SymbolConfiguration(scale: .medium)
-let largeConfiguration = UIImage.SymbolConfiguration(scale: .large)
-
-let symbol = "hifispeaker.fill"
-
-let image = UIImage(systemName: symbol, withConfiguration: largeConfiguration)!
+let symbol = "hifispeaker"
 
 struct ContentView: View {
-    var body: some View {
+
+	var body: some View {
 		NavigationView {
 			VStack {
-				Image(uiImage: image.withTintColor(.red, renderingMode: .alwaysOriginal))
+				Image(systemName: symbol)
+					.font(.title)
 				Text(symbol)
-			}.navigationBarTitle(Text("SF Playground"))
+				Spacer()
+					.frame(height: 50.0)
+				Button(action: {
+					
+				}, label: {
+					Image(systemName: symbol)
+					Text(symbol)
+				})
+					.foregroundColor(Color.black)
+					.padding()
+					.background(Color.orange)
+					.cornerRadius(10)
+					.contextMenu {
+						Image(systemName: symbol);
+						Text(symbol)
+				}
+				Text("Contextual menu with your icon")
+					.font(.caption)
+					.foregroundColor(Color.gray)
+			}
+			.navigationBarTitle(Text("SF Playground"))
+			.navigationBarItems(trailing:
+				Button(action: {
+					
+				}, label: {
+					Image(systemName: "info.circle.fill")
+						.foregroundColor(Color.orange)
+				})
+			)
 		}
-    }
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+	static var previews: some View {
+		ContentView()
+	}
 }
