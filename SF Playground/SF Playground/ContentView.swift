@@ -15,15 +15,28 @@ import SwiftUI
 let symbol = "hifispeaker"
 
 struct ContentView: View {
-
+	
+	@State private var favoriteColor = 0
+	
+	var colors = ["\(symbol)", "full screen", "gallery"]
+	
 	var body: some View {
 		NavigationView {
 			VStack {
+				Spacer()
+					.frame(height: 110.0)
+				Picker(selection: $favoriteColor, label: Text("What is your favorite color?")) {
+					ForEach(0..<colors.count) { index in
+						Text(self.colors[index]).tag(index)
+					}
+				}.pickerStyle(SegmentedPickerStyle()).padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+				Spacer()
+					.frame(height: 80.0)
 				Image(systemName: symbol)
 					.font(.title)
 				Text(symbol)
 				Spacer()
-					.frame(height: 50.0)
+					.frame(height: 80.0)
 				Button(action: {
 					
 				}, label: {
@@ -37,10 +50,12 @@ struct ContentView: View {
 					.contextMenu {
 						Image(systemName: symbol);
 						Text(symbol)
+							.multilineTextAlignment(.center)
 				}
 				Text("Contextual menu with your icon")
 					.font(.caption)
 					.foregroundColor(Color.gray)
+				Spacer()
 			}
 			.navigationBarTitle(Text("SF Playground"))
 			.navigationBarItems(trailing:
