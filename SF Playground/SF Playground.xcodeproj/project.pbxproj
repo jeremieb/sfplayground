@@ -15,6 +15,7 @@
 		65A0502E23521AA200527323 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A0502C23521AA200527323 /* LaunchScreen.storyboard */; };
 		65A0503923521AA200527323 /* SF_PlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A0503823521AA200527323 /* SF_PlaygroundTests.swift */; };
 		65A0504423521AA300527323 /* SF_PlaygroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A0504323521AA300527323 /* SF_PlaygroundUITests.swift */; };
+		65A050522352262700527323 /* YourIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A050512352262700527323 /* YourIcons.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		65A0503F23521AA200527323 /* SF PlaygroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SF PlaygroundUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A0504323521AA300527323 /* SF_PlaygroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SF_PlaygroundUITests.swift; sourceTree = "<group>"; };
 		65A0504523521AA300527323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65A050512352262700527323 /* YourIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YourIcons.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				65A0502323521AA100527323 /* SceneDelegate.swift */,
 				65A0502523521AA100527323 /* ContentView.swift */,
 				65A0502723521AA200527323 /* Assets.xcassets */,
+				65A050512352262700527323 /* YourIcons.xcassets */,
 				65A0502C23521AA200527323 /* LaunchScreen.storyboard */,
 				65A0502F23521AA200527323 /* Info.plist */,
 				65A0502923521AA200527323 /* Preview Content */,
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65A0502E23521AA200527323 /* LaunchScreen.storyboard in Resources */,
+				65A050522352262700527323 /* YourIcons.xcassets in Resources */,
 				65A0502B23521AA200527323 /* Preview Assets.xcassets in Resources */,
 				65A0502823521AA200527323 /* Assets.xcassets in Resources */,
 			);

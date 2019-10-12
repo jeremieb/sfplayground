@@ -8,9 +8,23 @@
 
 import SwiftUI
 
+
+let smallConfiguration = UIImage.SymbolConfiguration(scale: .small)
+let mediumConfiguration = UIImage.SymbolConfiguration(scale: .medium)
+let largeConfiguration = UIImage.SymbolConfiguration(scale: .large)
+
+let symbol = "hifispeaker.fill"
+
+let image = UIImage(systemName: symbol, withConfiguration: largeConfiguration)!
+
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+		NavigationView {
+			VStack {
+				Image(uiImage: image.withTintColor(.red, renderingMode: .alwaysOriginal))
+				Text(symbol)
+			}.navigationBarTitle(Text("SF Playground"))
+		}
     }
 }
 
