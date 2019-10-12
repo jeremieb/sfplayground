@@ -7,3 +7,5 @@ Just designed a custom icon? SF playground is the best way to test it on native 
 
 ### Support or Contact
 
+Please open an Issues on Github or you can contact me on Twitter: [@jeremieberduck](https://twitter.com/jeremieberduck)
+I'll do my best to answer you back.
