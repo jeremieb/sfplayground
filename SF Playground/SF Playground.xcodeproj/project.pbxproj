@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		652EB9982352788A00621F97 /* SF Playground.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SF Playground.entitlements"; sourceTree = "<group>"; };
 		6571558B23524E3B002EA434 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		65A0501E23521AA100527323 /* SF Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SF Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A0502123521AA100527323 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 		65A0502023521AA100527323 /* SF Playground */ = {
 			isa = PBXGroup;
 			children = (
+				652EB9982352788A00621F97 /* SF Playground.entitlements */,
 				65A0502123521AA100527323 /* AppDelegate.swift */,
 				65A0502323521AA100527323 /* SceneDelegate.swift */,
 				65A0502523521AA100527323 /* ContentView.swift */,
@@ -442,7 +444,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SF Playground/SF Playground.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SF Playground/Preview Content\"";
 				DEVELOPMENT_TEAM = PNJ2ZGDY4C;
 				ENABLE_PREVIEWS = YES;
@@ -451,8 +455,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremieberduck.sfplayground.SF-Playground";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,7 +468,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SF Playground/SF Playground.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SF Playground/Preview Content\"";
 				DEVELOPMENT_TEAM = PNJ2ZGDY4C;
 				ENABLE_PREVIEWS = YES;
@@ -471,8 +479,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremieberduck.sfplayground.SF-Playground";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
