@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  SF Symbol Playground
+//  SF Playground
 //
 //  Created by Jeremie Berduck on 12/10/2019.
 //  Copyright © 2019 Jeremie Berduck. All rights reserved.
