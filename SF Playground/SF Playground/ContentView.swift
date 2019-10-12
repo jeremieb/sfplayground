@@ -16,18 +16,18 @@ let symbol = "hifispeaker"
 
 struct ContentView: View {
 	
-	@State private var favoriteColor = 0
+	@State private var currentView = 0
 	
-	var colors = ["\(symbol)", "full screen", "gallery"]
+	var segmentedView = ["\(symbol)", "full screen", "gallery"]
 	
 	var body: some View {
 		NavigationView {
 			VStack {
 				Spacer()
 					.frame(height: 110.0)
-				Picker(selection: $favoriteColor, label: Text("What is your favorite color?")) {
-					ForEach(0..<colors.count) { index in
-						Text(self.colors[index]).tag(index)
+				Picker(selection: $currentView, label: Text("What is your favorite color?")) {
+					ForEach(0..<segmentedView.count) { index in
+						Text(self.segmentedView[index]).tag(index)
 					}
 				}.pickerStyle(SegmentedPickerStyle()).padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
 				Spacer()
