@@ -37,34 +37,40 @@ struct ContentView: View {
 				}.pickerStyle(SegmentedPickerStyle()).padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
 				Spacer()
 					.frame(height: 80.0)
-				VStack {
-					Image(systemName: symbol)
-						.font(.largeTitle)
-					Text(symbol)
-					Slider(value: $scale, in: 1.0...10.0, step: 0.1)
-						.padding(.all, 20)
-				}
-				Spacer()
-					.frame(height: 150.0)
-				Button(action: {
-					
-				}, label: {
-					Image(systemName: symbol)
-					Text(symbol)
-				})
-					.foregroundColor(Color.black)
-					.padding()
-					.background(Color.orange)
-					.cornerRadius(10)
-					.contextMenu {
-						Image(systemName: symbol);
+				Group{
+					VStack {
+						Image(systemName: symbol)
+							.font(.largeTitle)
 						Text(symbol)
-							.multilineTextAlignment(.center)
+						Slider(value: $scale, in: 1.0...10.0, step: 0.1)
+							.padding(.all, 20)
+					}
+					Spacer()
+						.frame(height: 150.0)
+					Button(action: {
+						
+					}, label: {
+						Image(systemName: symbol)
+						Text(symbol)
+					})
+						.foregroundColor(Color.black)
+						.padding()
+						.background(Color.orange)
+						.cornerRadius(10)
+						.contextMenu {
+							Image(systemName: symbol);
+							Text(symbol)
+								.multilineTextAlignment(.center)
+					}
+					Text("Contextual menu with your icon")
+						.font(.caption)
+						.foregroundColor(Color.gray)
+					Spacer()
 				}
-				Text("Contextual menu with your icon")
-					.font(.caption)
-					.foregroundColor(Color.gray)
-				Spacer()
+				Group{
+					Image(systemName: symbol)
+						.font(.system(size: 60))
+				}
 			}
 			.navigationBarTitle(Text("SF Playground"))
 			.navigationBarItems(trailing:
