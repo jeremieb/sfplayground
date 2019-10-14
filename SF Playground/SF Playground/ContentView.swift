@@ -11,8 +11,10 @@ import SwiftUI
 //SF Symbol to try:
 // • hifispeaker.fill
 // • hifispeaker
+// • sportscourt
+// • sportscourt.fill
 
-let symbol = "hifispeaker"
+let symbol = "sportscourt.fill"
 
 struct ContentView: View {
 	
