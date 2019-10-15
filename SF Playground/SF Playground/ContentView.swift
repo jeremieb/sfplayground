@@ -24,7 +24,7 @@ struct ContentView: View {
 	@State private var displayWeight = 18
 	@State var fontWeight = [".ultraLight", ".thin", ".light", ".regular", ".medium", ".semibold", ".bold", ".heavy", ".black"]
 	
-	var segmentedView = ["\(symbol)", "full screen", "gallery"]
+	var segmentedView = ["\(symbol)", "ultra big", "gallery"]
 	
 	var body: some View {
 		
@@ -45,10 +45,17 @@ struct ContentView: View {
 					.frame(height: 80.0)
 				
 				VStack {
+					Spacer(minLength: 30)
 					Image(systemName: symbol)
 						.font(.largeTitle)
+					Spacer(minLength: 5)
 					Text(symbol)
+						.font(.footnote)
+					Spacer(minLength: 5)
 				}
+				.frame(width: 100, height: 100, alignment: .center)
+				.background(Color.gray.opacity(0.3))
+				.cornerRadius(10)
 
 				Image("test")
 				
