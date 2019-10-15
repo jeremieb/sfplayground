@@ -2,29 +2,18 @@ import SwiftUI
 import PlaygroundSupport
 
 struct ContentView: View {
-    @State var showModal:Bool = false
-    var body: some View {
-        NavigationView{
-			Image(systemName: "sportscourt.fill")
-				.font(.system(size: 60))
-            Text("Sample")
-            .navigationBarTitle("List")
-            .navigationBarItems(leading:Button("Edit"){
-                    self.showModal = true
-                })
-        }.sheet(isPresented: self.$showModal) {
-            Modal(isOn: self.$showModal)
-        }
-    }
-}
 
-struct Modal: View {
-    @Binding var isOn:Bool
     var body: some View {
-        Text("Dismiss Modal View").onTapGesture {
-            self.isOn = false
-        }
+		VStack{
+			Image("jeremie")
+				.scaleEffect(0.50)
+			Text("SF Playground is a project initialiazed by Jeremie Berduck. You can follow me on Twitter: @jeremieberduck")
+				.font(.footnote)
+				.foregroundColor(Color.gray)
+				.multilineTextAlignment(.center)
+		}
     }
+
 }
 
 let host = UIHostingController(rootView: ContentView())

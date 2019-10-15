@@ -18,6 +18,8 @@ let symbol = "sportscourt.fill"
 
 struct ContentView: View {
 	
+	@State var isPresented: Bool = false
+	
 	@State private var currentView = 0	
 	@State private var displayWeight = 18
 	@State var fontWeight = [".ultraLight", ".thin", ".light", ".regular", ".medium", ".semibold", ".bold", ".heavy", ".black"]
@@ -72,17 +74,30 @@ struct ContentView: View {
 					.foregroundColor(Color.gray)
 				
 				Spacer()
+
 			}
 			.navigationBarTitle(Text("SF Playground"))
 			.navigationBarItems(trailing:
-				Button(action: {
-					
-				}, label: {
+				Button(action: { self.isPresented.toggle() }, label: {
 					Image(systemName: "info.circle.fill")
 						.foregroundColor(Color.orange)
 						.font(.title)
 				})
 			)
+			.sheet(isPresented: $isPresented) {
+				VStack{
+					Spacer()
+					HStack{
+						Image("jeremie")
+							.scaleEffect(0.20)
+							.frame(width: 90, height: 90, alignment: .center)
+						Text("SF Playground is a project initialiazed by Jeremie Berduck. You can follow me on Twitter: @jeremieberduck")
+							.font(.footnote)
+							.foregroundColor(Color.gray)
+							.padding(.all)
+					}
+				}
+			}
 		}
 	}
 }
