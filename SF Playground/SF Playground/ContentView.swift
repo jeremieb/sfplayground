@@ -49,6 +49,8 @@ struct ContentView: View {
 						.font(.largeTitle)
 					Text(symbol)
 				}
+
+				Image("test")
 				
 				Spacer()
 					.frame(height: 190.0)
@@ -84,6 +86,8 @@ struct ContentView: View {
 						.font(.title)
 				})
 			)
+				
+			// Info Screen
 			.sheet(isPresented: $isPresented) {
 				VStack{
 					Spacer()
@@ -102,8 +106,10 @@ struct ContentView: View {
 	}
 }
 
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
 		ContentView()
 	}
 }
+#endif
