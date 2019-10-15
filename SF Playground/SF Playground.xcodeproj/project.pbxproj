@@ -39,6 +39,7 @@
 /* Begin PBXFileReference section */
 		652EB9982352788A00621F97 /* SF Playground.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SF Playground.entitlements"; sourceTree = "<group>"; };
 		6571558B23524E3B002EA434 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		6577C58F2354D9FC00CEFEBE /* Modal.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Modal.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		65A0501E23521AA100527323 /* SF Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SF Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A0502123521AA100527323 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65A0502323521AA100527323 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6577C58E2354D9BE00CEFEBE /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				6577C58F2354D9FC00CEFEBE /* Modal.playground */,
+			);
+			path = Playground;
+			sourceTree = "<group>";
+		};
 		65A0501523521AA100527323 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +122,7 @@
 				65A050512352262700527323 /* YourIcons.xcassets */,
 				65A0502C23521AA200527323 /* LaunchScreen.storyboard */,
 				65A0502F23521AA200527323 /* Info.plist */,
+				6577C58E2354D9BE00CEFEBE /* Playground */,
 				65A0502923521AA200527323 /* Preview Content */,
 			);
 			path = "SF Playground";
