@@ -52,7 +52,7 @@ struct ContentView: View {
 				
 				Spacer()
 					.frame(height: 80.0)
-				
+
 				Group {
 					VStack {
 						Spacer(minLength: 30)
@@ -65,12 +65,12 @@ struct ContentView: View {
 					}
 					.frame(width: 100, height: 100, alignment: .center)
 					.background(Color.gray.opacity(0.3))
-					.cornerRadius(10)
-					
-					Image("test")
-					
-					Spacer()
-						.frame(height: 190.0)
+  				.cornerRadius(10)
+
+				Image("test")
+				
+				Spacer()
+					.frame(height: 190.0)
 					
 					Button(action: {
 						
