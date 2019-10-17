@@ -18,13 +18,18 @@ let symbol = "sportscourt.fill"
 
 struct ContentView: View {
 	
+	// Info view
 	@State var isPresented: Bool = false
 	
+	// Upcoming groups states
 	@State var showMainView = true
 	@State var showSecondView = false
 	@State var showthirdView = false
 	
+	//Picker segmented
 	@State private var currentView = 0	
+	
+	// Upcoming slider with custom font weight and size
 	@State private var displayWeight = 18
 	@State var fontWeight = [".ultraLight", ".thin", ".light", ".regular", ".medium", ".semibold", ".bold", ".heavy", ".black"]
 	
@@ -47,14 +52,6 @@ struct ContentView: View {
 				
 				Spacer()
 					.frame(height: 80.0)
-				
-				// # Main view
-				
-				if self.showMainView {
-					
-				} else {
-					
-				}
 				
 				Group {
 					VStack {
