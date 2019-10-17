@@ -20,6 +20,10 @@ struct ContentView: View {
 	
 	@State var isPresented: Bool = false
 	
+	@State var showMainView = true
+	@State var showSecondView = false
+	@State var showthirdView = false
+	
 	@State private var currentView = 0	
 	@State private var displayWeight = 18
 	@State var fontWeight = [".ultraLight", ".thin", ".light", ".regular", ".medium", ".semibold", ".bold", ".heavy", ".black"]
@@ -44,46 +48,62 @@ struct ContentView: View {
 				Spacer()
 					.frame(height: 80.0)
 				
-				VStack {
-					Spacer(minLength: 30)
+				// # Main view
+				
+				if self.showMainView {
+					
+				} else {
+					
+				}
+				
+				Group {
+					VStack {
+						Spacer(minLength: 30)
+						Image(systemName: symbol)
+							.font(.largeTitle)
+						Spacer(minLength: 5)
+						Text(symbol)
+							.font(.footnote)
+						Spacer(minLength: 5)
+					}
+					.frame(width: 100, height: 100, alignment: .center)
+					.background(Color.gray.opacity(0.3))
+					.cornerRadius(10)
+					
+					Image("test")
+					
+					Spacer()
+						.frame(height: 190.0)
+					
+					Button(action: {
+						
+					}, label: {
+						Image(systemName: symbol)
+						Text(symbol)
+					})
+						.foregroundColor(Color.black)
+						.padding()
+						.background(Color.orange)
+						.cornerRadius(10)
+						.contextMenu {
+							Image(systemName: symbol);
+							Text(symbol)
+								.multilineTextAlignment(.center)
+					}
+					
+					Text("Contextual menu with your icon")
+						.font(.caption)
+						.foregroundColor(Color.gray)
+					
+					Spacer()
+					
+				}
+				
+				Group {
 					Image(systemName: symbol)
 						.font(.largeTitle)
-					Spacer(minLength: 5)
-					Text(symbol)
-						.font(.footnote)
-					Spacer(minLength: 5)
-				}
-				.frame(width: 100, height: 100, alignment: .center)
-				.background(Color.gray.opacity(0.3))
-				.cornerRadius(10)
-
-				Image("test")
-				
-				Spacer()
-					.frame(height: 190.0)
-				
-				Button(action: {
-					
-				}, label: {
-					Image(systemName: symbol)
-					Text(symbol)
-				})
-					.foregroundColor(Color.black)
-					.padding()
-					.background(Color.orange)
-					.cornerRadius(10)
-					.contextMenu {
-						Image(systemName: symbol);
-						Text(symbol)
-							.multilineTextAlignment(.center)
 				}
 				
-				Text("Contextual menu with your icon")
-					.font(.caption)
-					.foregroundColor(Color.gray)
-				
-				Spacer()
-
 			}
 			.navigationBarTitle(Text("SF Playground"))
 			.navigationBarItems(trailing:
@@ -94,20 +114,20 @@ struct ContentView: View {
 				})
 			)
 				
-			// Info Screen
-			.sheet(isPresented: $isPresented) {
-				VStack{
-					Spacer()
-					HStack{
-						Image("jeremie")
-							.scaleEffect(0.20)
-							.frame(width: 90, height: 90, alignment: .center)
-						Text("SF Playground is a project initialiazed by Jeremie Berduck. You can follow me on Twitter: @jeremieberduck")
-							.font(.footnote)
-							.foregroundColor(Color.gray)
-							.padding(.all)
+				// Info Screen
+				.sheet(isPresented: $isPresented) {
+					VStack{
+						Spacer()
+						HStack{
+							Image("jeremie")
+								.scaleEffect(0.20)
+								.frame(width: 90, height: 90, alignment: .center)
+							Text("SF Playground is a project initialiazed by Jeremie Berduck. You can follow me on Twitter: @jeremieberduck")
+								.font(.footnote)
+								.foregroundColor(Color.gray)
+								.padding(.all)
+						}
 					}
-				}
 			}
 		}
 	}
@@ -116,7 +136,17 @@ struct ContentView: View {
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView()
+		Group {
+			ContentView()
+			ContentView()
+				.previewLayout(.sizeThatFits)
+				.environment(\.sizeCategory, .extraExtraExtraLarge)
+				.previewDevice("iPhone SE")
+			ContentView()
+				.previewLayout(.sizeThatFits)
+				.previewDevice("iPhone 11 Pro Max")
+		}
 	}
 }
 #endif
+
