@@ -38,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		652EB9982352788A00621F97 /* SF Playground.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SF Playground.entitlements"; sourceTree = "<group>"; };
+		6543E407235B06C8005DE502 /* Segmented.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Segmented.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6571558B23524E3B002EA434 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		6577C58F2354D9FC00CEFEBE /* Modal.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Modal.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		65A0501E23521AA100527323 /* SF Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SF Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +86,7 @@
 		6577C58E2354D9BE00CEFEBE /* Playground */ = {
 			isa = PBXGroup;
 			children = (
+				6543E407235B06C8005DE502 /* Segmented.playground */,
 				6577C58F2354D9FC00CEFEBE /* Modal.playground */,
 			);
 			path = Playground;
@@ -457,10 +459,11 @@
 				CODE_SIGN_ENTITLEMENTS = "SF Playground/SF Playground.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"SF Playground/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "SF\\ Playground/Preview\\ Content SF\\ Playground/YourIcons.xcassets";
 				DEVELOPMENT_TEAM = PNJ2ZGDY4C;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SF Playground/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,10 +484,11 @@
 				CODE_SIGN_ENTITLEMENTS = "SF Playground/SF Playground.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"SF Playground/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "SF\\ Playground/Preview\\ Content SF\\ Playground/YourIcons.xcassets";
 				DEVELOPMENT_TEAM = PNJ2ZGDY4C;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SF Playground/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
