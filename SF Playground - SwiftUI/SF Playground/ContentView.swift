@@ -14,7 +14,7 @@ import SwiftUI
 // • sportscourt
 // • sportscourt.fill
 
-let symbol :String = "custom.circle"
+let symbol :String = "swift.tv"
 
 var dynamicImage: UIImage {
 	let configuration = UIImage.SymbolConfiguration(textStyle: .body, scale: .large)
