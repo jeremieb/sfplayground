@@ -459,7 +459,7 @@
 				CODE_SIGN_ENTITLEMENTS = "SF Playground/SF Playground.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"SF Playground/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "SF\\ Playground/Preview\\ Content SF\\ Playground/YourIcons.xcassets";
 				DEVELOPMENT_TEAM = PNJ2ZGDY4C;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SF Playground/Info.plist";
@@ -484,7 +484,7 @@
 				CODE_SIGN_ENTITLEMENTS = "SF Playground/SF Playground.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"SF Playground/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "SF\\ Playground/Preview\\ Content SF\\ Playground/YourIcons.xcassets";
 				DEVELOPMENT_TEAM = PNJ2ZGDY4C;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SF Playground/Info.plist";

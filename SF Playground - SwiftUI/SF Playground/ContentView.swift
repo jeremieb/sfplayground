@@ -14,7 +14,13 @@ import SwiftUI
 // • sportscourt
 // • sportscourt.fill
 
-let symbol = "sportscourt.fill"
+let symbol :String = "custom.circle"
+
+var dynamicImage: UIImage {
+	let configuration = UIImage.SymbolConfiguration(textStyle: .body, scale: .large)
+	let image = UIImage(named: symbol) ?? UIImage()
+	return image.withConfiguration(configuration)
+}
 
 struct ContentView: View {
 	
@@ -56,7 +62,7 @@ struct ContentView: View {
 				Group {
 					VStack {
 						Spacer(minLength: 30)
-						Image(systemName: symbol)
+						Image(uiImage: dynamicImage)
 							.font(.largeTitle)
 						Spacer(minLength: 5)
 						Text(symbol)
@@ -67,15 +73,13 @@ struct ContentView: View {
 					.background(Color.gray.opacity(0.3))
 					.cornerRadius(10)
 					
-					Image("test")
-					
 					Spacer()
 						.frame(height: 190.0)
 					
 					Button(action: {
 						
 					}, label: {
-						Image(systemName: symbol)
+						Image(uiImage: dynamicImage)
 						Text(symbol)
 					})
 						.foregroundColor(Color.black)
@@ -83,7 +87,7 @@ struct ContentView: View {
 						.background(Color.orange)
 						.cornerRadius(10)
 						.contextMenu {
-							Image(systemName: symbol);
+							Image(uiImage: dynamicImage);
 							Text(symbol)
 								.multilineTextAlignment(.center)
 					}
@@ -96,10 +100,10 @@ struct ContentView: View {
 					
 				}
 				
-				Group {
-					Image(systemName: symbol)
-						.font(.largeTitle)
-				}
+//				Group {
+//					Image(uiImage: dynamicImage)
+//						.font(.largeTitle)
+//				}
 				
 			}
 			.navigationBarTitle(Text("SF Playground"))
@@ -134,11 +138,11 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
-			ContentView()
-			ContentView()
-				.previewLayout(.sizeThatFits)
-				.environment(\.sizeCategory, .extraExtraExtraLarge)
-				.previewDevice("iPhone SE")
+//			ContentView()
+//			ContentView()
+//				.previewLayout(.sizeThatFits)
+//				.environment(\.sizeCategory, .extraExtraExtraLarge)
+//				.previewDevice("iPhone SE")
 			ContentView()
 				.previewLayout(.sizeThatFits)
 				.previewDevice("iPhone 11 Pro Max")
