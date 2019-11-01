@@ -100,11 +100,6 @@ struct ContentView: View {
 					
 				}
 				
-//				Group {
-//					Image(uiImage: dynamicImage)
-//						.font(.largeTitle)
-//				}
-				
 			}
 			.navigationBarTitle(Text("SF Playground"))
 			.navigationBarItems(trailing:
