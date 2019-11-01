@@ -138,14 +138,13 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
-//			ContentView()
-//			ContentView()
-//				.previewLayout(.sizeThatFits)
-//				.environment(\.sizeCategory, .extraExtraExtraLarge)
-//				.previewDevice("iPhone SE")
 			ContentView()
 				.previewLayout(.sizeThatFits)
-				.previewDevice("iPhone 11 Pro Max")
+				.previewDevice("iPhone 11 Pro")
+			ContentView()
+				.previewLayout(.sizeThatFits)
+				.previewDevice("iPhone 11 Pro")
+				.environment(\.colorScheme, .dark)
 		}
 	}
 }
